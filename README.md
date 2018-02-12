@@ -15,7 +15,7 @@
 13. `git clone https://github.com/KongBoje/TwitterAnalysis && cd TwitterAnalysis`
 
 run it by using the command:
-mvn exec:java -Dexec.args="{Kommando}"
+- `mvn exec:java -Dexec.args="{Kommando}"`
 
 Replace "{Kommando}" with either one of the following command:
 - `TotalAmount`
