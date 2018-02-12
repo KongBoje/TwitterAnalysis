@@ -18,9 +18,9 @@
 1. `download the zip file from: - http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip`
 4. `manually unzip trainingandtestdata.zip`
 5. `Open terminal on the unzipped trainingandtestdata.zip fil`
-6. `Write: sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv`
-7. `import it: mongoimport --drop --db social_net --collection tweets --type csv --headerline --file training.1600000.processed.noemoticon.csv`
-8. `Clone the project: git clone https://github.com/KongBoje/TwitterAnalysis && cd TwitterAnalysis`
+6. `Write: - sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv`
+7. `import it: - mongoimport --drop --db social_net --collection tweets --type csv --headerline --file training.1600000.processed.noemoticon.csv`
+8. `Clone the project: - git clone https://github.com/KongBoje/TwitterAnalysis && cd TwitterAnalysis`
 
 run it by using the command:
 - `mvn exec:java -Dexec.args="{Kommando}"`
