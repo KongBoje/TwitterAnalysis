@@ -1,14 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.twitteranalysis;
 
-/**
- *
- * @author Micha
- */
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+
 public class MongoConnection {
+    
+    private static MongoClient instance = null;
+    private MongoConnection() {
+        //Compiler can't make a default constructor and stops instantiation.
+    }
+    
+    public static synchronized MongoClient getInstance() {
+        if (instance == null) {
+            MongoClientURI connectionString = new MongoClientURI("mongodb://localhost:27017");
+            instance = new MongoClient(connectionString);
+        }
+        return instance;
+    }
     
 }
