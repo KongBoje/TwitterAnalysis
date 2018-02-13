@@ -16,7 +16,7 @@ public class Tweets {
     
     //How many Twitter users are in the database?
     public long TwitUsers(DBCollection collection) {
-        return collection.count();
+        return collection.distinct("users").size();
     }
     
     //Which Twitter users link the most to other Twitter users? (Provide the top ten.)
